@@ -3,9 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnnemiesGenerator : MonoBehaviour
+public class EnemiesGenerator : MonoBehaviour
 {
-    public List<GameObject> ennemiesPrefabs;
+    public List<GameObject> EnemiesPrefabs;
+    public float SecondsBetweenEnnemies = 0.5f;
+
     private readonly Vector3 positionUp = new Vector3(0, 0, 7);
     private readonly Vector3 positionDown = new Vector3(0, 0, -7);
     private readonly Vector3 positionLeft = new Vector3(-7, 0, 0);
@@ -15,7 +17,6 @@ public class EnnemiesGenerator : MonoBehaviour
     private readonly Vector3 rotationLeft = new Vector3(0, 90, 0);
     private readonly Vector3 rotationRight = new Vector3(0, 270, 0);
     private List<Tuple<Vector3, Vector3>> positionsRotations;
-    public float secondsBetweenEnnemies;
 
     // Start is called before the first frame update
     void Start()
@@ -35,11 +36,11 @@ public class EnnemiesGenerator : MonoBehaviour
     {
         while (true)
         {
-            var ennemyPrefab = ennemiesPrefabs[UnityEngine.Random.Range(0, ennemiesPrefabs.Count)];
+            var enemyPrefab = EnemiesPrefabs[UnityEngine.Random.Range(0, EnemiesPrefabs.Count)];
             var positionRotation = positionsRotations[UnityEngine.Random.Range(0, positionsRotations.Count)];
-            Instantiate(ennemyPrefab, positionRotation.Item1, Quaternion.Euler(positionRotation.Item2));
+            Instantiate(enemyPrefab, positionRotation.Item1, Quaternion.Euler(positionRotation.Item2));
 
-            yield return new WaitForSeconds(secondsBetweenEnnemies);
+            yield return new WaitForSeconds(SecondsBetweenEnnemies);
         }
 
     }

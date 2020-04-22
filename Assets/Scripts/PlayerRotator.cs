@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class PlayerRotator : MonoBehaviour
 {
-    public float speed = 0.001f;
+    public float Speed = 0.001f;
     IEnumerator TurnClockwise(bool clockwise)
     {
         float angle = clockwise ? 10 : -10;
         for (int i= 0; i < 9; i++)
         {
             this.transform.Rotate(new Vector3(0.0f,angle,0.0f));
-            yield return new WaitForSeconds(speed);
+            yield return new WaitForSeconds(Speed);
         }
     }
     
