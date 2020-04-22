@@ -21,11 +21,11 @@ public class PlayerRotator : MonoBehaviour
         {
             if (Input.GetAxisRaw("Rotate") > 0)
             {
-                StartCoroutine("TurnClockwise", true);
+                StartCoroutine(nameof(TurnClockwise), true);
             }
             else
             {
-                StartCoroutine("TurnClockwise", false);           
+                StartCoroutine(nameof(TurnClockwise), false);           
             }
         }
     }
