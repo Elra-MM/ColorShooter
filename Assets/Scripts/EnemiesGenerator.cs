@@ -7,12 +7,13 @@ using UnityEngine;
 public class EnemiesGenerator : MonoBehaviour
 {
     public List<GameObject> EnemiesPrefabs;
-    public float SecondsBetweenEnnemies = 0.5f;
+    public float SecondsBetweenEnnemies;
 
-    private readonly Vector3 positionUp = new Vector3(0, 0, 7);
-    private readonly Vector3 positionDown = new Vector3(0, 0, -7);
-    private readonly Vector3 positionLeft = new Vector3(-7, 0, 0);
-    private readonly Vector3 positionRight = new Vector3(7, 0, 0);
+    private const int startingDistance = 9; 
+    private readonly Vector3 positionUp = new Vector3(0, 0, startingDistance);
+    private readonly Vector3 positionDown = new Vector3(0, 0, -startingDistance);
+    private readonly Vector3 positionLeft = new Vector3(-startingDistance, 0, 0);
+    private readonly Vector3 positionRight = new Vector3(startingDistance, 0, 0);
     private readonly Vector3 rotationUp = new Vector3(0, 180, 0);
     private readonly Vector3 rotationDown = new Vector3(0, 0, 0);
     private readonly Vector3 rotationLeft = new Vector3(0, 90, 0);
