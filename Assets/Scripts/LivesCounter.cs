@@ -1,19 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class LivesCounter : MonoBehaviour
 {
     public int CurrentLives;
+    public UnityEvent LivesCountChanged { get; } = new UnityEvent();
     private const string enemyTag = "Enemy";
-    
-    void Start()
-    {
-        CurrentLives = 3;
-    }
+    // Start is called before the first frame update
     void OnCollisionEnter(Collision collision)
     {
-        CurrentLives--;
-        Destroy(collision.gameObject);
+        if (collision.gameObject.CompareTag(enemyTag))
+        {
+            CurrentLives--;
+            LivesCountChanged.Invoke();
+            Destroy(collision.gameObject);
+        }
     }
 }
