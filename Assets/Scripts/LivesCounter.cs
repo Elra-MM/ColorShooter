@@ -13,10 +13,7 @@ public class LivesCounter : MonoBehaviour
     }
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag(enemyTag))
-        {
-            CurrentLives--;
-            Destroy(collision.gameObject);
-        }
+        CurrentLives--;
+        Destroy(collision.gameObject);
     }
 }

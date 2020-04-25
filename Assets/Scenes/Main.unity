@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 206442721}
   - component: {fileID: 206442720}
   - component: {fileID: 206442723}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RedCapsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -244,7 +244,7 @@ GameObject:
   - component: {fileID: 214729216}
   - component: {fileID: 214729217}
   - component: {fileID: 214729218}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -286,6 +286,7 @@ MonoBehaviour:
   YellowGun: {fileID: 1276753072}
   BlueGun: {fileID: 1958901959}
   GreenGun: {fileID: 1357665466}
+  Rotating: 0
 --- !u!114 &214729217
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -407,6 +408,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GreenQuarter
       objectReference: {fileID: 0}
+    - target: {fileID: 2663882382274795263, guid: e1a747b35f3b9dc4191fef6fe014a57a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1a747b35f3b9dc4191fef6fe014a57a, type: 3}
 --- !u!4 &316976240 stripped
@@ -425,6 +431,7 @@ GameObject:
   m_Component:
   - component: {fileID: 588468113}
   - component: {fileID: 588468112}
+  - component: {fileID: 588468114}
   m_Layer: 0
   m_Name: GameLogic
   m_TagString: Untagged
@@ -464,6 +471,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &588468114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588468111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27bdfe251b927b44fb8cfd8ee1294379, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: 0
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -706,6 +726,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlueQuarter
       objectReference: {fileID: 0}
+    - target: {fileID: 5575418251462756147, guid: 26aac655039a50b49a0dfc8fc97c6b25,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5835336013114518099, guid: 26aac655039a50b49a0dfc8fc97c6b25,
         type: 3}
       propertyPath: m_RootOrder
@@ -730,6 +755,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: YellowQuarter
+      objectReference: {fileID: 0}
+    - target: {fileID: 6573300830126985225, guid: 57966f9f8105aaa4a94aeb428c83db0c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7881958641935917594, guid: 57966f9f8105aaa4a94aeb428c83db0c,
         type: 3}
@@ -807,7 +837,7 @@ GameObject:
   - component: {fileID: 1276753075}
   - component: {fileID: 1276753074}
   - component: {fileID: 1276753077}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: YellowCapsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -916,7 +946,7 @@ GameObject:
   - component: {fileID: 1357665469}
   - component: {fileID: 1357665468}
   - component: {fileID: 1357665471}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GreenCapsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1084,6 +1114,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlueQuarter
       objectReference: {fileID: 0}
+    - target: {fileID: 8566605382082789315, guid: c49cdfd297812594ea71532fac5dde4e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c49cdfd297812594ea71532fac5dde4e, type: 3}
 --- !u!4 &1571347291 stripped
@@ -1105,7 +1140,7 @@ GameObject:
   - component: {fileID: 1958901962}
   - component: {fileID: 1958901961}
   - component: {fileID: 1958901964}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BlueCapsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}

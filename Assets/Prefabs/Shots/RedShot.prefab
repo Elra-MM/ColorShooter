@@ -15,9 +15,10 @@ GameObject:
   - component: {fileID: 72939766036259831}
   - component: {fileID: 4501861731611006704}
   - component: {fileID: 7276697450684109985}
-  m_Layer: 0
+  - component: {fileID: 8395321341671899512}
+  m_Layer: 9
   m_Name: RedShot
-  m_TagString: Untagged
+  m_TagString: Red
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -145,3 +146,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: {x: 0, y: 0, z: 0}
+--- !u!114 &8395321341671899512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4501861731604599534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b3de3b720fcda64889729d8eb2107c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameLogic: {fileID: 0}
