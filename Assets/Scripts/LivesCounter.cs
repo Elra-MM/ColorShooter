@@ -11,11 +11,8 @@ public class LivesCounter : MonoBehaviour
     // Start is called before the first frame update
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag(enemyTag))
-        {
-            CurrentLives--;
-            LivesCountChanged.Invoke();
-            Destroy(collision.gameObject);
-        }
+        CurrentLives--;
+        LivesCountChanged.Invoke();
+        Destroy(collision.gameObject);
     }
 }
