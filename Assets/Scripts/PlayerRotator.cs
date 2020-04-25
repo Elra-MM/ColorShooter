@@ -12,6 +12,8 @@ public class PlayerRotator : MonoBehaviour
     public GameObject GreenGun;
     public GameObject[] gunsPosition { get; } = new GameObject[4];
 
+    public bool Rotating;
+
     public const int Left = 0;
     public const int Up = 1;
     public const int Right = 2;
@@ -25,14 +27,16 @@ public class PlayerRotator : MonoBehaviour
         gunsPosition[Down] = GreenGun;
     }
 
-    IEnumerator TurnClockwise(bool clockwise)
+    IEnumerator Rotate(bool clockwise)
     {
+        Rotating = true;
         float angle = clockwise ? 10 : -10;
         for (int i= 0; i < 9; i++)
         {
             this.transform.Rotate(new Vector3(0.0f,angle,0.0f));
             yield return new WaitForSeconds(Speed);
         }
+        Rotating = false;
         if (clockwise)
             UpdateGunsPositionClockwise();
         else
@@ -46,14 +50,14 @@ public class PlayerRotator : MonoBehaviour
             //Turn clockwise
             if (Input.GetAxisRaw("Rotate") > 0)
             {
-                StartCoroutine(nameof(TurnClockwise), true);
+                StartCoroutine(nameof(Rotate), true);
                 
                 
             }
             //Turn CounterClockwise
             else
             {
-                StartCoroutine(nameof(TurnClockwise), false);           
+                StartCoroutine(nameof(Rotate), false);           
             }
         }
     }

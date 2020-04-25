@@ -282,10 +282,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 0.001
-  RedGun: {fileID: 0}
-  YellowGun: {fileID: 0}
-  BlueGun: {fileID: 0}
-  GreenGun: {fileID: 0}
+  RedGun: {fileID: 206442718}
+  YellowGun: {fileID: 1276753072}
+  BlueGun: {fileID: 1958901959}
+  GreenGun: {fileID: 1357665466}
 --- !u!114 &214729217
 MonoBehaviour:
   m_ObjectHideFlags: 0

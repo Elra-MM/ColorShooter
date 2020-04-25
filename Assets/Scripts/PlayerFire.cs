@@ -6,6 +6,7 @@ using UnityEngine;
 public class PlayerFire : MonoBehaviour
 {
     private PlayerRotator playerRotator;
+    private Rigidbody rigidBod;
     private void Start()
     {
         playerRotator = this.GetComponent<PlayerRotator>();
@@ -13,6 +14,11 @@ public class PlayerFire : MonoBehaviour
 
     void Update()
     {
+        // don't allow firing while rotating
+        if (playerRotator.Rotating)
+        {
+            return;
+        }
         if (Input.GetButtonDown("Horizontal"))
         {
             //RIGHT
