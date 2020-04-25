@@ -16,7 +16,7 @@ public class EnemiesGenerator : MonoBehaviour
     private readonly Vector3 rotationUp = new Vector3(0, 180, 0);
     private readonly Vector3 rotationDown = new Vector3(0, 0, 0);
     private readonly Vector3 rotationLeft = new Vector3(0, 90, 0);
-    private readonly Vector3 rotationRight = new Vector3(0, 270, 0);
+    private readonly Vector3 rotationRight = new Vector3(0, -90, 0);
     private List<Tuple<Vector3, Vector3>> spawns;
 
     // Start is called before the first frame update

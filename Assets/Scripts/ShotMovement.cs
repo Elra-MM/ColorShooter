@@ -7,6 +7,10 @@ public class ShotMovement : MonoBehaviour
     public Vector3 direction;
     void Update()
     {
-        Vector3.MoveTowards(this.transform.position, direction, 2.0f);
+        transform.Translate(direction * Time.deltaTime);
+        if (Vector3.Distance(transform.position , new Vector3(1,1,1)) >= 8.5f)
+        {
+            Destroy(this.gameObject);
+        }
     }
 }

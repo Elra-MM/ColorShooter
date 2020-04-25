@@ -6,9 +6,11 @@ public class LaserShooter : MonoBehaviour
 {
     public GameObject shotPrefab;
 
-    public void Shot(Vector3 direction)
+    public void Shot(Vector3 direction, Vector3 rotation)
     {
-        var shot = Instantiate(shotPrefab);
-        shot.GetComponent<ShotMovement>().direction = direction;
+        var shot = Instantiate(shotPrefab, transform.position, Quaternion.Euler(rotation));
+        var shotMovement = shot.GetComponent<ShotMovement>();
+        shotMovement.direction = Vector3.up;
+        shotMovement.enabled = true;
     }
 }

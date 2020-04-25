@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 206442722}
   - component: {fileID: 206442721}
   - component: {fileID: 206442720}
+  - component: {fileID: 206442723}
   m_Layer: 0
   m_Name: RedCapsule
   m_TagString: Untagged
@@ -215,6 +216,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 206442718}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &206442723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 206442718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21b743090cfb8344ca643a7af9c32c46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shotPrefab: {fileID: 4501861731604599534, guid: 1c0188429ea3f6b4b83534c2d5758350,
+    type: 3}
 --- !u!1 &214729214
 GameObject:
   m_ObjectHideFlags: 0
@@ -280,10 +295,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f186931a9f75a3549ad910ab860fa694, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RedShot: {fileID: 206442718}
-  YellowShot: {fileID: 1276753072}
-  GreenShot: {fileID: 1357665466}
-  BlueShot: {fileID: 1958901959}
 --- !u!1001 &316976239
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -750,6 +761,7 @@ GameObject:
   - component: {fileID: 1276753076}
   - component: {fileID: 1276753075}
   - component: {fileID: 1276753074}
+  - component: {fileID: 1276753077}
   m_Layer: 0
   m_Name: YellowCapsule
   m_TagString: Untagged
@@ -832,6 +844,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1276753072}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1276753077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1276753072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21b743090cfb8344ca643a7af9c32c46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shotPrefab: {fileID: 4501861731604599534, guid: fb34d1f935e093c45be53753ea2d0412,
+    type: 3}
 --- !u!1 &1357665466
 GameObject:
   m_ObjectHideFlags: 0
@@ -844,6 +870,7 @@ GameObject:
   - component: {fileID: 1357665470}
   - component: {fileID: 1357665469}
   - component: {fileID: 1357665468}
+  - component: {fileID: 1357665471}
   m_Layer: 0
   m_Name: GreenCapsule
   m_TagString: Untagged
@@ -926,6 +953,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1357665466}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1357665471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1357665466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21b743090cfb8344ca643a7af9c32c46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shotPrefab: {fileID: 4501861731604599534, guid: 074f5125d2744bf4a8793f2cd77832f4,
+    type: 3}
 --- !u!1001 &1571347290
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1018,6 +1059,7 @@ GameObject:
   - component: {fileID: 1958901963}
   - component: {fileID: 1958901962}
   - component: {fileID: 1958901961}
+  - component: {fileID: 1958901964}
   m_Layer: 0
   m_Name: BlueCapsule
   m_TagString: Untagged
@@ -1100,3 +1142,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1958901959}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1958901964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1958901959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21b743090cfb8344ca643a7af9c32c46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shotPrefab: {fileID: 4501861731604599534, guid: 577965d50d944b341baa81f0bb3bbe44,
+    type: 3}
