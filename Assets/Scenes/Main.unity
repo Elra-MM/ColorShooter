@@ -148,13 +148,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 206442718}
-  m_LocalRotation: {x: 0.010445356, y: -0.028979704, z: 0.36478102, w: 0.9305837}
-  m_LocalPosition: {x: -0.0067, y: 0.0071, z: 0}
-  m_LocalScale: {x: 0.001, y: 0.001, z: 0.001}
+  m_LocalRotation: {x: 0, y: 0, z: 0.38268343, w: 0.92387956}
+  m_LocalPosition: {x: -0.00676, y: 0.0067, z: -6.4245e-11}
+  m_LocalScale: {x: 0.002, y: 0.002, z: 0.002}
   m_Children: []
   m_Father: {fileID: 966996580}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 2.3260002, y: -2.657, z: 42.756}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 45}
 --- !u!136 &206442720
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -215,7 +215,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 206442718}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &206442723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -867,13 +867,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1276753072}
-  m_LocalRotation: {x: 0.02674913, y: -0.01730111, z: 0.37026837, w: 0.9283784}
-  m_LocalPosition: {x: -0.006570036, y: 0.007030064, z: -0.000000047683713}
-  m_LocalScale: {x: 0.001, y: 0.001, z: 0.001}
+  m_LocalRotation: {x: 0, y: 0, z: 0.38268343, w: 0.92387956}
+  m_LocalPosition: {x: -0.00672, y: 0.00679, z: -0}
+  m_LocalScale: {x: 0.002, y: 0.002, z: 0.002}
   m_Children: []
   m_Father: {fileID: 1078624895}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 3.5820003, y: -0.707, z: 43.465004}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 45}
 --- !u!136 &1276753074
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -934,7 +934,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1276753072}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &1276753077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -976,13 +976,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1357665466}
-  m_LocalRotation: {x: -0.025709677, y: 0.016628455, z: 0.35587275, w: 0.9340327}
-  m_LocalPosition: {x: -0.0068700938, y: 0.0068699867, z: 0.00000011801719}
-  m_LocalScale: {x: 0.001, y: 0.001, z: 0.001}
+  m_LocalRotation: {x: 0, y: 0, z: 0.38268343, w: 0.92387956}
+  m_LocalPosition: {x: -0.00672, y: 0.00672, z: 0}
+  m_LocalScale: {x: 0.002, y: 0.002, z: 0.002}
   m_Children: []
   m_Father: {fileID: 316976240}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -3.4320002, y: 0.73300004, z: 41.692}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 45}
 --- !u!136 &1357665468
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1043,7 +1043,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1357665466}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &1357665471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1170,13 +1170,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1958901959}
-  m_LocalRotation: {x: 0.017973917, y: 0.027789028, z: 0.3846609, w: 0.9224645}
-  m_LocalPosition: {x: -0.0069503, y: 0.006950108, z: 0.00000006510262}
-  m_LocalScale: {x: 0.001, y: 0.001, z: 0.001}
+  m_LocalRotation: {x: 0, y: 0, z: 0.38268343, w: 0.92387956}
+  m_LocalPosition: {x: -0.00673, y: 0.00673, z: 0.00000006510262}
+  m_LocalScale: {x: 0.002, y: 0.002, z: 0.002}
   m_Children: []
   m_Father: {fileID: 1571347291}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0.675, y: 3.7330003, z: 45.294003}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 45}
 --- !u!136 &1958901961
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1237,7 +1237,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1958901959}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &1958901964
 MonoBehaviour:
   m_ObjectHideFlags: 0
