@@ -6,13 +6,15 @@ using UnityEngine.Events;
 public class LivesCounter : MonoBehaviour
 {
     public int CurrentLives;
+    public GameObject explosionPrefab;
     public UnityEvent LivesCountChanged { get; } = new UnityEvent();
-    private const string enemyTag = "Enemy";
-    // Start is called before the first frame update
+
     void OnCollisionEnter(Collision collision)
     {
         CurrentLives--;
         LivesCountChanged.Invoke();
+        var explosion = Instantiate(explosionPrefab, this.transform.position + new Vector3(0, 0.5f, 0), Quaternion.identity);
+        Destroy(explosion, 3);
         Destroy(collision.gameObject);
     }
 }
