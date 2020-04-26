@@ -311,7 +311,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f3e1d7116d87bf449c0300a421b9cb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentLives: 0
+  CurrentLives: 3
 --- !u!54 &214729219
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -432,6 +432,7 @@ GameObject:
   - component: {fileID: 588468113}
   - component: {fileID: 588468112}
   - component: {fileID: 588468114}
+  - component: {fileID: 588468115}
   m_Layer: 0
   m_Name: GameLogic
   m_TagString: Untagged
@@ -484,6 +485,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
+--- !u!114 &588468115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588468111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5087dfa73eaf8e64d8ba11df0bcbc072, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 214729214}
+  heartPrefab: {fileID: 7015002965903513469, guid: d5090c6935b4b934283952c5f4ebe137,
+    type: 3}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
