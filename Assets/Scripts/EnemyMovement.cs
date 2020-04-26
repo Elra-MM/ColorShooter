@@ -5,16 +5,16 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-    private const int speed = 1;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float Speed = 1;
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector3.MoveTowards(this.transform.position, Vector3.zero, speed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(this.transform.position, Vector3.zero, Speed * Time.deltaTime);
+    }
+
+    public void IncreaseSpeed()
+    {
+        Speed += 0.5f;
     }
 }

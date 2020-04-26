@@ -523,7 +523,8 @@ MonoBehaviour:
   - {fileID: 1589203934501006, guid: 365f373a27ab5b241a1fbea53e447596, type: 3}
   - {fileID: 1589203934501006, guid: 05d8adff78ace1446a04008d1d27ad10, type: 3}
   - {fileID: 1589203934501006, guid: 65aa278f338422845a7b3bb4bd574eb2, type: 3}
-  SecondsBetweenEnnemies: 2
+  MinSecondsBetweenEnnemies: 0.5
+  MaxSecondsBetweenEnnemies: 2
 --- !u!4 &588468113
 Transform:
   m_ObjectHideFlags: 0
@@ -1292,7 +1293,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Score : '
+  m_Text: 'Score : 0'
 --- !u!222 &1515605965
 CanvasRenderer:
   m_ObjectHideFlags: 0
