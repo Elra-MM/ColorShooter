@@ -1,21 +1,30 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Score : MonoBehaviour
 {
     public int score = 0;
+    public Text scoreDisplay;
 
-    public void Add()
+
+    public void Add(int i  = 1)
     {
-        score++;
-        Debug.Log("score : " + score);
+        score += i;
+        UpdateScoreDisplay();
     }
 
-    public void Substract()
+    private void UpdateScoreDisplay()
     {
-        score--;
-        Debug.Log("score : " + score);
-
+        scoreDisplay.text = $"Score : {score}";
     }
+
+    public void Substract(int i = 1)
+    {
+        score-=i;
+        UpdateScoreDisplay();
+    }
+
+
 }
