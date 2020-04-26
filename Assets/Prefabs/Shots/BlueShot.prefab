@@ -145,7 +145,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 404280d8c1b8bb74696ee49fe275eeb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  direction: {x: 0, y: 0, z: 0}
 --- !u!114 &5612400529801155813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,4 +157,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b3de3b720fcda64889729d8eb2107c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameLogic: {fileID: 0}
+  score: {fileID: 0}
