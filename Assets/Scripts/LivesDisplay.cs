@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEditorInternal;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class LivesDisplay : MonoBehaviour
@@ -9,7 +7,6 @@ public class LivesDisplay : MonoBehaviour
     private LivesCounter livesCounter;
     public GameObject heartPrefab;
     private readonly List<GameObject> hearts = new List<GameObject>();
-    private Vector3 firstHeartPosition = new Vector3(7.2f, 0, 5.3f);
     // Start is called before the first frame update
     void Start()
     {
@@ -27,9 +24,9 @@ public class LivesDisplay : MonoBehaviour
 
         for (int i = 0; i < livesCounter.CurrentLives; i++)
         {
-            var pos = firstHeartPosition;
-            pos.x = firstHeartPosition.x - i;
-            var heart = Instantiate(heartPrefab, pos, Quaternion.Euler(new Vector3(90, 0, 0)));
+            var pos = this.transform.position;
+            pos.x -= i*0.1f;
+            var heart = Instantiate(heartPrefab, pos , Quaternion.Euler(new Vector3(90, 0, 0)));
             hearts.Add(heart);
         }
     }
