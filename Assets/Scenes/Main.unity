@@ -314,6 +314,7 @@ MonoBehaviour:
   CurrentLives: 3
   explosionPrefab: {fileID: 1121192042590650, guid: e1b08032bec16ba4eb1ae23cbd572664,
     type: 3}
+  PanelLose: {fileID: 625025066}
 --- !u!54 &214729219
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -501,6 +502,7 @@ GameObject:
   - component: {fileID: 588468112}
   - component: {fileID: 588468114}
   - component: {fileID: 588468115}
+  - component: {fileID: 588468116}
   m_Layer: 0
   m_Name: GameLogic
   m_TagString: Untagged
@@ -570,6 +572,18 @@ MonoBehaviour:
   player: {fileID: 214729214}
   heartPrefab: {fileID: 7015002965903513469, guid: d5090c6935b4b934283952c5f4ebe137,
     type: 3}
+--- !u!114 &588468116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588468111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 977fbb9db5a36f640ac77be554c97d86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &625025066
 GameObject:
   m_ObjectHideFlags: 0
@@ -587,7 +601,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &625025067
 RectTransform:
   m_ObjectHideFlags: 0
@@ -622,7 +636,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 0.16862746, g: 0.62352943, b: 0.80392164, a: 0.53333336}
+  m_Color: {r: 0.023529414, g: 0.15294118, b: 0.37647063, a: 0.6509804}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -803,7 +817,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 636463932}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 588468116}
+        m_MethodName: TryAgain
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &636463932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1561,7 +1586,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: 861296285
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!224 &1463808341

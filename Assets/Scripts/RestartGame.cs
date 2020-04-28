@@ -8,5 +8,6 @@ public class RestartGame : MonoBehaviour
    public void TryAgain()
    {
       SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+      Time.timeScale = 1;
    }
 }

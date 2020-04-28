@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UIElements;
 
 public class LivesCounter : MonoBehaviour
 {
     public int CurrentLives;
     public GameObject explosionPrefab;
     public UnityEvent LivesCountChanged { get; } = new UnityEvent();
-
+    public GameObject PanelLose;
     void OnCollisionEnter(Collision collision)
     {
         CurrentLives--;
@@ -18,7 +19,14 @@ public class LivesCounter : MonoBehaviour
         Destroy(collision.gameObject);
         if (CurrentLives == 0)
         {
-            Time.timeScale = 0;
+            StartCoroutine(EndGame());
         }
+    }
+
+    IEnumerator EndGame()
+    {
+        yield return new WaitForSeconds(0.5f);
+        PanelLose.SetActive(true);
+        Time.timeScale = 0;
     }
 }

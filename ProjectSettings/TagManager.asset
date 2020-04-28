@@ -41,7 +41,6 @@ TagManager:
   - 
   - 
   - 
-  - 
   m_SortingLayers:
   - name: Default
     uniqueID: 0
@@ -51,4 +50,7 @@ TagManager:
     locked: 0
   - name: Shot
     uniqueID: 3655548575
+    locked: 0
+  - name: UI
+    uniqueID: 861296285
     locked: 0
