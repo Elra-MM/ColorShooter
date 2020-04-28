@@ -6,12 +6,14 @@ using UnityEngine;
 public class ShotCollision : MonoBehaviour
 {
     public Score score;
-    public GameObject explosionPrefab;
+    public GameObject explosionPrefab; 
+    
     void OnCollisionEnter(Collision collision)
     {
         //Same color
         if (collision.gameObject.CompareTag(this.tag))
         {
+            Sounds.PlaySound("explosion");
             score.Add(); 
             Destroy(this.gameObject);
             var explosion = Instantiate(explosionPrefab, collision.gameObject.transform.position, Quaternion.identity);

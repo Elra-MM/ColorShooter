@@ -21,6 +21,7 @@ public class PlayerFire : MonoBehaviour
         }
         if (Input.GetButtonDown("Horizontal"))
         {
+            Sounds.PlaySound("pewpew");
             //RIGHT
             if (Input.GetAxisRaw("Horizontal") > 0)
             {
@@ -36,6 +37,7 @@ public class PlayerFire : MonoBehaviour
         }
         if (Input.GetButtonDown("Vertical"))
         {
+            Sounds.PlaySound("pewpew");
             //UP
             if (Input.GetAxisRaw("Vertical") > 0)
             {

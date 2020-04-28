@@ -12,6 +12,7 @@ public class LivesCounter : MonoBehaviour
     public GameObject PanelLose;
     void OnCollisionEnter(Collision collision)
     {
+        Sounds.PlaySound("explosion");
         CurrentLives--;
         LivesCountChanged.Invoke();
         var explosion = Instantiate(explosionPrefab, this.transform.position + new Vector3(0, 0.5f, 0), Quaternion.identity);
