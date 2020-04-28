@@ -11,7 +11,7 @@ public class EnemiesGenerator : MonoBehaviour
     public float MinSecondsBetweenEnnemies;
     public float MaxSecondsBetweenEnnemies;
 
-    private const int startingDistance = 9;
+    private const float startingDistance = 6.5f;
     private readonly Vector3 positionUp = new Vector3(0, 0, startingDistance);
     private readonly Vector3 positionDown = new Vector3(0, 0, -startingDistance);
     private readonly Vector3 positionLeft = new Vector3(-startingDistance, 0, 0);
