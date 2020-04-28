@@ -48,6 +48,7 @@ public class PlayerRotator : MonoBehaviour
     
     void Update()
     {
+        if (Time.timeScale == 0) return;
         if (Input.GetButtonDown("Rotate"))
         {
             //Turn clockwise

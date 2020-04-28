@@ -15,7 +15,7 @@ public class PlayerFire : MonoBehaviour
     void Update()
     {
         // don't allow firing while rotating
-        if (playerRotator.Rotating)
+        if (playerRotator.Rotating || Time.timeScale == 0)
         {
             return;
         }
