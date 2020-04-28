@@ -7,12 +7,15 @@ public class LivesCounter : MonoBehaviour
 {
     public int CurrentLives;
     public UnityEvent LivesCountChanged { get; } = new UnityEvent();
-    private const string enemyTag = "Enemy";
-    // Start is called before the first frame update
+
     void OnCollisionEnter(Collision collision)
     {
         CurrentLives--;
         LivesCountChanged.Invoke();
         Destroy(collision.gameObject);
+        if (CurrentLives == 0)
+        {
+            Time.timeScale = 0;
+        }
     }
 }
