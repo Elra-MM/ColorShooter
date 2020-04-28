@@ -29,18 +29,21 @@ public class PlayerRotator : MonoBehaviour
 
     IEnumerator Rotate(bool clockwise)
     {
-        Rotating = true;
-        float angle = clockwise ? 10 : -10;
-        for (int i= 0; i < 9; i++)
+        if (!Rotating)
         {
-            this.transform.Rotate(new Vector3(0.0f,angle,0.0f));
-            yield return new WaitForSeconds(Speed);
+            Rotating = true;
+            float angle = clockwise ? 10 : -10;
+            for (int i = 0; i < 9; i++)
+            {
+                this.transform.Rotate(new Vector3(0.0f, angle, 0.0f));
+                yield return new WaitForSeconds(Speed);
+            }
+            Rotating = false;
+            if (clockwise)
+                UpdateGunsPositionClockwise();
+            else
+                UpdateGunsPositionCounterClockwise();
         }
-        Rotating = false;
-        if (clockwise)
-            UpdateGunsPositionClockwise();
-        else
-            UpdateGunsPositionCounterClockwise();
     }
     
     void Update()
