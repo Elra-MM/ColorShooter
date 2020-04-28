@@ -6,6 +6,7 @@ using UnityEngine;
 public class ShotCollision : MonoBehaviour
 {
     public Score score;
+    public GameObject explosionPrefab;
     void OnCollisionEnter(Collision collision)
     {
         //Same color
@@ -13,6 +14,8 @@ public class ShotCollision : MonoBehaviour
         {
             score.Add(); 
             Destroy(this.gameObject);
+            var explosion = Instantiate(explosionPrefab, collision.gameObject.transform.position, Quaternion.identity);
+            Destroy(explosion, 3);
             Destroy(collision.gameObject);
         }
         //different color
