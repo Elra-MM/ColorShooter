@@ -15,7 +15,7 @@ public class LaserShooter : MonoBehaviour
         score = GameLogic.GetComponent<Score>();
     }
 
-    public void Shot(Vector3 direction, Vector3 rotation)
+    public void Shot(Vector3 rotation)
     {
         var shot = Instantiate(shotPrefab, transform.position, Quaternion.Euler(rotation));
         shot.GetComponent<ShotCollision>().score = score;
