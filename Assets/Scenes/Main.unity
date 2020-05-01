@@ -788,8 +788,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5, y: 46}
-  m_SizeDelta: {x: 500, y: 185.6932}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 520.3641, y: 368.9036}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &407733988
 MonoBehaviour:
@@ -822,7 +822,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Project Aphrodite
+  m_Text: COLOR SHOOTER
 --- !u!222 &407733989
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -978,7 +978,7 @@ RectTransform:
   m_GameObject: {fileID: 557153173}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0.0000011434}
-  m_LocalScale: {x: 1.6954159, y: 2.0149076, z: 1.5070363}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 976422219}
   m_Father: {fileID: 1499569993}
@@ -2656,7 +2656,7 @@ RectTransform:
   m_GameObject: {fileID: 1499569992}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 0}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0}
   m_Children:
   - {fileID: 407733987}
   - {fileID: 557153174}

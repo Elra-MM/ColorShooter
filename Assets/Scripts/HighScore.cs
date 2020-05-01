@@ -16,7 +16,6 @@ public class HighScore : MonoBehaviour
     public Button SubmitButton;
     public GameObject CheckMarkImage;
     private const string highScoreUrl = "https://scoreboard.canu.cool/api/score";
-    //private const string highScoreUrl = "https://localhost:32768/api/score";
     private const string hashKey = "fVlgFveBo0WlPbeDNAlyiVQCyCW0DI9L757wpHRB3Ouak85oRJ";
 
     // Start is called before the first frame update
