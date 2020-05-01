@@ -97,7 +97,7 @@ public class HighScore : MonoBehaviour
             var scores = JsonUtility.FromJson<HighScoreItems>("{\"scores\":" + request.downloadHandler.text + "}")
                 .scores
                 .OrderByDescending(x => x.score)
-                .Take(10);
+                .Take(8);
 
             for (int i = 0; i < this.transform.childCount; i++)
             {
