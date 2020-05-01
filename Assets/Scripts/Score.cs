@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
@@ -8,6 +6,7 @@ public class Score : MonoBehaviour
 {
     public int score = 0;
     public Text scoreDisplay;
+    public Text loseScoreDisplay;
     public UnityEvent ScoreHasIncreased { get; } = new UnityEvent();
     private int scoreMaximum = 0;
     private const int scoreStepForDifficultyIncrease = 10;
@@ -35,7 +34,8 @@ public class Score : MonoBehaviour
 
     private void UpdateScoreDisplay()
     {
-        scoreDisplay.text = $"Score : {score}";
+        scoreDisplay.text = score.ToString();
+        loseScoreDisplay.text = score.ToString();
     }
 
     public void Substract(int i = 1)
