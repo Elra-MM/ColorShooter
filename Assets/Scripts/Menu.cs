@@ -27,6 +27,7 @@ public class Menu : MonoBehaviour
     public void StartGame()
     {
         MainMenuPanel.SetActive(false);
+        Sounds.PlaySound("music");
         Time.timeScale = 1;
     }
 

@@ -23,6 +23,7 @@ public class ShotCollision : MonoBehaviour
         //different color
         else
         {
+            Sounds.PlaySound("wrongColor");
             score.Substract();
             Destroy(this.gameObject);
         }
