@@ -6,7 +6,8 @@ using UnityEngine;
 public class PlayerFire : MonoBehaviour
 {
     private PlayerRotator playerRotator;
-    private Rigidbody rigidBod;
+    private List<int> shotCache = new List<int>();
+
     private void Start()
     {
         playerRotator = this.GetComponent<PlayerRotator>();
@@ -14,43 +15,63 @@ public class PlayerFire : MonoBehaviour
 
     void Update()
     {
-        // don't allow firing while rotating
-        if (playerRotator.Rotating || Time.timeScale == 0)
+        if (Time.timeScale == 0)
         {
             return;
         }
+
         if (Input.GetButtonDown("Horizontal"))
         {
-            Sounds.PlaySound("pewpew");
             //RIGHT
             if (Input.GetAxisRaw("Horizontal") > 0)
             {
-                var gun = playerRotator.gunsPosition[PlayerRotator.Right];
-                gun.GetComponent<LaserShooter>().Shot(new Vector3(90,0,-90));
+                shotCache.Add(PlayerRotator.Right);
             }
             //LEFT
             else
             {
-                var gun = playerRotator.gunsPosition[PlayerRotator.Left];
-                gun.GetComponent<LaserShooter>().Shot(new Vector3(90,0,90));
+                shotCache.Add(PlayerRotator.Left);
             }
         }
         if (Input.GetButtonDown("Vertical"))
         {
-            Sounds.PlaySound("pewpew");
             //UP
             if (Input.GetAxisRaw("Vertical") > 0)
             {
-                var gun = playerRotator.gunsPosition[PlayerRotator.Up];
-                gun.GetComponent<LaserShooter>().Shot(new Vector3(90,0,0));
+                shotCache.Add(PlayerRotator.Up);
             }
             //DOWN
             else
             {
-                var gun = playerRotator.gunsPosition[PlayerRotator.Down];
-                gun.GetComponent<LaserShooter>().Shot(new Vector3(90,0,180)); 
+                shotCache.Add(PlayerRotator.Down);
             }
         }
-        
+
+        if (playerRotator.Rotating) return;
+
+        foreach (var shotDirection in shotCache)
+        {
+            Vector3 shotRotation;
+            switch (shotDirection)
+            {
+                case PlayerRotator.Right:
+                    shotRotation = new Vector3(90, 0, -90);
+                    break;
+                case PlayerRotator.Left:
+                    shotRotation = new Vector3(90, 0, 90);
+                    break;
+                case PlayerRotator.Up:
+                    shotRotation = new Vector3(90, 0, 0);
+                    break;
+                case PlayerRotator.Down:
+                default:
+                    shotRotation = new Vector3(90, 0, 180);
+                    break;
+            }
+            Sounds.PlaySound("pewpew");
+            var gun = playerRotator.gunsPosition[shotDirection];
+            gun.GetComponent<LaserShooter>().Shot(shotRotation);
+        }
+        shotCache.Clear();
     }
 }
