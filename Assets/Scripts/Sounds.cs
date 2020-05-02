@@ -1,12 +1,16 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Sounds : MonoBehaviour
 {
+    private static AudioSource audioSourceMusic;
+    private static AudioSource audioSourceFSX;
     private static AudioClip explosion, pewpew, wrongColor, backgroundMusic;
-    private static AudioSource audioSource;
+    private static float musicVolume = 0.5f;
+    private static float sfxVolume = 0.5f;
 
     private void Awake()
     {
@@ -14,9 +18,9 @@ public class Sounds : MonoBehaviour
         pewpew = Resources.Load<AudioClip>("Sounds/PewPew");
         wrongColor = Resources.Load<AudioClip>("Sounds/Hurt");
         backgroundMusic = Resources.Load<AudioClip>("Sounds/Music");
-        
 
-        audioSource = this.GetComponent<AudioSource>();
+        audioSourceFSX = this.GetComponents<AudioSource>()[0];
+        audioSourceMusic = this.GetComponents<AudioSource>()[1];
     }
 
     public static void PlaySound(string clip)
@@ -24,22 +28,36 @@ public class Sounds : MonoBehaviour
         switch (clip)
         {
             case "music":
-                audioSource.PlayOneShot(backgroundMusic);
-                audioSource.loop = true;
+                audioSourceMusic.PlayOneShot(backgroundMusic);
+                audioSourceMusic.loop = true;
+                audioSourceMusic.volume = musicVolume;
                 break;
             case "explosion":
-                audioSource.PlayOneShot(explosion);
-                audioSource.volume = 0.2f;
+                audioSourceFSX.PlayOneShot(explosion);
+                audioSourceFSX.volume = sfxVolume;
                 break;
             case "wrongColor":
-                audioSource.PlayOneShot(wrongColor);
-                audioSource.volume = 0.5f;
+                audioSourceFSX.PlayOneShot(wrongColor);
+                audioSourceFSX.volume = sfxVolume;
                 break;
             case "pewpew":
             default:
-                audioSource.PlayOneShot(pewpew);
-                audioSource.volume = 0.5f;
+                audioSourceFSX.PlayOneShot(pewpew);
+                audioSourceFSX.volume = sfxVolume;
                 break;
         }
+    }
+
+    public void SetMusicVolume(float volume)
+    {
+        audioSourceMusic.Stop();
+        musicVolume = volume;
+        PlaySound("music");
+    }
+
+    public void SetSFXVolume(float volume)
+    {
+        sfxVolume = volume;
+        PlaySound("explosion");
     }
 }

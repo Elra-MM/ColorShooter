@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class Menu : MonoBehaviour
 {
     public GameObject MainMenuPanel;
+    public GameObject PausePanel;
     public Button StartButton;
     public Button RestartButton;
 
@@ -30,6 +31,12 @@ public class Menu : MonoBehaviour
         Sounds.PlaySound("music");
         Time.timeScale = 1;
     }
+    
+    public void Continue()
+    {
+        Time.timeScale = 1;
+        PausePanel.SetActive(false);
+    }
 
     public void Update()
     {
@@ -42,6 +49,15 @@ public class Menu : MonoBehaviour
             else if (RestartButton.IsActive())
             {
                 TryAgain();
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (!StartButton.IsActive())
+            {
+                Time.timeScale = 0;
+                PausePanel.SetActive(true);
             }
         }
     }
