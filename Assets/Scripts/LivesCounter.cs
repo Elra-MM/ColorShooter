@@ -8,7 +8,7 @@ public class LivesCounter : MonoBehaviour
 {
     public int CurrentLives;
     public GameObject explosionPrefab;
-    public UnityEvent LivesCountChanged { get; } = new UnityEvent();
+    public UnityEvent LivesCountChanged { get; } = new UnityEvent(); //prefer observable from Unirx
     public GameObject PanelLose;
     void OnCollisionEnter(Collision collision)
     {

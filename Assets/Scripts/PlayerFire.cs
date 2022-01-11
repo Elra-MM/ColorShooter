@@ -3,13 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(PlayerRotator))]
 public class PlayerFire : MonoBehaviour
 {
     private PlayerRotator playerRotator;
-    private List<int> shotCache = new List<int>();
+    private List<int> shotCache = new List<int>(); //doesn't seem to be usefull..why not shot directly rather than add to a list
 
     private void Start()
     {
+        //nice but should do something if we don't get the PlayerRotator
         playerRotator = this.GetComponent<PlayerRotator>();
     }
 
@@ -47,9 +49,9 @@ public class PlayerFire : MonoBehaviour
             }
         }
 
-        if (playerRotator.Rotating) return;
+        if (playerRotator.Rotating) return; //should use a subscription to the observable but still,
 
-        foreach (var shotDirection in shotCache)
+        foreach (var shotDirection in shotCache) //outch "var", don't use that here
         {
             Vector3 shotRotation;
             switch (shotDirection)
@@ -68,8 +70,8 @@ public class PlayerFire : MonoBehaviour
                     shotRotation = new Vector3(90, 0, 180);
                     break;
             }
-            Sounds.PlaySound("pewpew");
-            var gun = playerRotator.gunsPosition[shotDirection];
+            Sounds.PlaySound("pewpew"); //nice name but should be a serialized field in case the name changes
+            var gun = playerRotator.gunsPosition[shotDirection]; //no need to create a variable here
             gun.GetComponent<LaserShooter>().Shot(shotRotation);
         }
         shotCache.Clear();

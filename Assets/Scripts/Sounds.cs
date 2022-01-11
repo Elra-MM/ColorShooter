@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class Sounds : MonoBehaviour
 {
+    //should be on a proper gameobject like "sounds"
     private static AudioSource audioSourceMusic;
     private static AudioSource audioSourceFSX;
     private static AudioClip explosion, pewpew, wrongColor, backgroundMusic;
